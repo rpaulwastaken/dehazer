@@ -9,7 +9,7 @@ This project focuses on utilizing machine learning techniques to remove haze and
 ✨ **Key Features** ✨
 
 - **Image Dehazing:** The model is designed to remove haze and improve visibility in images and video frames.
-- **U-Net Architecture:** Leveraging the power of UNet, a popular choice for image restoration and enhancement tasks.
+- **Architecture:** This repository contains of two different architectures to perform dehazing: UNet and Pix2Pix.
 - **Requirements:** Make sure you have TensorFlow, scikit-learn, OpenCV, and other dependencies installed (see requirements.txt).
 
 ## Getting Started
@@ -19,7 +19,7 @@ This project focuses on utilizing machine learning techniques to remove haze and
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/dehazing-unet.git
+   git clone https://github.com/rpaulwastaken/dehazer.git
 
 
 2. Install required dependencies using the following command
