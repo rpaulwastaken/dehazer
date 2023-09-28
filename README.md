@@ -32,15 +32,18 @@ This project focuses on utilizing machine learning techniques to remove haze and
 
 By enhancing the model architecture through the addition of supplementary layers and training it on high-performance dedicated GPUs, we can achieve outputs with significantly higher resolutions.  
 
-**Sample Input**
+### **Sample Input**
 
-![sample_input](https://github.com/rpaulwastaken/dehazer/assets/136478346/35976fb2-83f2-49a2-b36f-2f3bcc18c822)
-
-
-**Sample Output**
-
-![sample_output](https://github.com/rpaulwastaken/dehazer/assets/136478346/5d8c58ee-4ad2-4530-b2b6-77e7ed2c67e2)
+![sample_Input](sample_Input.png)
 
 
+### **Sample Output U-Net**
+
+![sample_output_unet](output_Unet.png)
+
+
+### **Sample Output Pix2Pix**
+
+![sample_output_pix2pix](output_Pix2Pix.png)
 
 
