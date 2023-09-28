@@ -3,7 +3,7 @@ from model import sarra
 
 
 # Function to train a dehazing model
-def train(X_train, X_val, y_train, y_val, input_shape, num_epochs=60, batch_size=3, model_name='my_Model.h5'):
+def train_unet(X_train, X_val, y_train, y_val, input_shape, output_dir, num_epochs=60, batch_size=3, model_name='my_Model.h5'):
     with tf.device('/GPU:0'):
         # Define the dehazing model
         model = sarra(input_shape)
@@ -15,4 +15,4 @@ def train(X_train, X_val, y_train, y_val, input_shape, num_epochs=60, batch_size
         model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=num_epochs, batch_size=batch_size)
 
         # Save the trained dehazing model
-        model.save('U-Net/' + model_name)
+        model.save(output_dir + model_name)
