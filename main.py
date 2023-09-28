@@ -3,7 +3,6 @@ from unet_train import train_unet
 from pix2pix_train import train_pix2pix
 from predict import predict_and_visualize, vid_read
 import cv2
-import numpy as np
 import tensorflow as tf
 
 
