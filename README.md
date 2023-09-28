@@ -28,6 +28,9 @@ This project focuses on utilizing machine learning techniques to remove haze and
 
 3. Make sure your Environment Variables are set correctly
 
+## Trained Models
+Here is a google drive link to the trained models: https://drive.google.com/drive/folders/1Uh8nfn4vCnb6XOZRrU2qhV-IaLTSqJNp?usp=sharing
+
 ## Sample Input Output
 
 By enhancing the model architecture through the addition of supplementary layers and training it on high-performance dedicated GPUs, we can achieve outputs with significantly higher resolutions.  
