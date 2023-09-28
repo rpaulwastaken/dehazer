@@ -40,14 +40,14 @@ if __name__ == '__main__':
         model = tf.keras.models.load_model(dehaze_model)
 
         # Specify the path to the input video file for human detection and dehazing
-        directory = 'test_files/test_vid.mp4'
+        directory = 'sample_test_files/test_vid.mp4'
 
         # Call the function to read the video, perform human detection, and dehazing
         with tf.device('/GPU:0'):
             vid_read(model, directory)
 
         # Specify the path to a test hazy image for dehazing
-        test_img_dir = 'test_files/hazedimg.jpg'
+        test_img_dir = 'sample_test_files/hazedimg.jpg'
         img = cv2.imread(test_img_dir)
 
         # Predict and visualize the dehazed image
