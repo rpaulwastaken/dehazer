@@ -33,6 +33,9 @@ if __name__ == '__main__':
         # Specify the path to the trained dehazing model
         dehaze_model = 'models/pix2pix/p2p.h5'
 
+        # uncomment the following to load the U-Net model instead
+        # dehaze_model = 'models/U-Net/unet.h5'
+
         # Load the trained dehazing model
         model = tf.keras.models.load_model(dehaze_model)
 
