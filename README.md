@@ -1,6 +1,6 @@
-# Dehazer
+# De-hazer
 
-🌥️ **Welcome to the Dehazing project!** 🌥️
+🌥️ **Welcome to the De-hazing project!** 🌥️
 
 This project focuses on utilizing machine learning techniques to remove haze and enhance visibility in images and videos. The core architecture used here is the UNet neural network, well-suited for image-to-image translation tasks.
 
@@ -8,8 +8,8 @@ This project focuses on utilizing machine learning techniques to remove haze and
 
 ✨ **Key Features** ✨
 
-- **Image Dehazing:** The model is designed to remove haze and improve visibility in images and video frames.
-- **Architecture:** This repository contains of two different architectures to perform dehazing: UNet and Pix2Pix.
+- **Image De-Hazing:** The model is designed to remove haze and improve visibility in images and video frames.
+- **Architecture:** This repository contains two different architectures to perform de-hazing: UNet and Pix2Pix.
 - **Requirements:** Make sure you have TensorFlow, scikit-learn, OpenCV, and other dependencies installed (see requirements.txt).
 
 ## Getting Started
@@ -29,7 +29,7 @@ This project focuses on utilizing machine learning techniques to remove haze and
 3. Make sure your Environment Variables are set correctly
 
 ## Trained Models
-Here is a google drive link to the trained models: https://drive.google.com/drive/folders/1Uh8nfn4vCnb6XOZRrU2qhV-IaLTSqJNp?usp=sharing
+Here is a Google Drive link to the trained models: https://drive.google.com/drive/folders/1Uh8nfn4vCnb6XOZRrU2qhV-IaLTSqJNp?usp=sharing
 
 ## Sample Input Output
 
