@@ -8,8 +8,8 @@ import tensorflow as tf
 if __name__ == '__main__':
     with tf.device('/CPU:0'):  # Change this to '/GPU:0' if you have a GPU with enough memory
         # Specify the path to the hazy and ground truth images
-        hazy_dir = 'dataset/Hazy_Indoor'
-        gt_dir = 'dataset/GT_Indoor'
+        hazy_dir = 'dataset/Hazy_Small'
+        gt_dir = 'dataset/GT_Small'
 
         # Load, split, and preprocess the dataset for training
         X_train, X_val, y_train, y_val, input_shape = load_and_split(hazy_dir, gt_dir)
@@ -32,12 +32,12 @@ if __name__ == '__main__':
         # Uncomment the following to train the U-Net model
         # output_dir = 'models/U-Net'
         # train_unet(X_train, X_val,
-        #           y_train, y_val,
-        #           input_shape,
-        #           output_dir,
-        #           num_epochs=15,
-        #           batch_size=batch_size,
-        #           model_name='unet.h5')
+        #            y_train, y_val,
+        #            input_shape,
+        #            output_dir,
+        #            num_epochs=60,
+        #            batch_size=batch_size,
+        #            model_name='unet.h5')
 
         # Specify the path to the trained de-hazing model
         dehaze_model = 'models/pix2pix/p2p.h5'
