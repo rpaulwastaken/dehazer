@@ -4,7 +4,7 @@ from tensorflow.keras.models import Model
 
 with tf.device('/GPU:0'):
     # Define the dehazing model
-    def sarra(input_shape):
+    def unet(input_shape):
         # Define the input layer
         inputs = Input(shape=input_shape)
 
