@@ -17,8 +17,6 @@ def predict_and_visualize(model, img):
         # Resize the prediction
         prediction = model.predict(np.expand_dims(img, axis=0))[0]
 
-        prediction = post_process(prediction, raw)
-
         cv2.imshow('Prediction', prediction)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
@@ -33,8 +31,6 @@ def vid_read(model, directory):
         if frame is None:
             break
 
-        raw = frame.copy()
-
         frame, rectangles = hog_human_detection(frame)
         frame = preprocess(frame)
         frame = cv2.resize(frame, (256, 256))
@@ -42,9 +38,7 @@ def vid_read(model, directory):
 
         prediction = model.predict(np.expand_dims(frame, axis=0))[0]
 
-        processed_output = post_process(prediction, raw)
-
-        cv2.putText(processed_output, f'Total Humans: {len(rectangles)}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1,
+        cv2.putText(prediction, f'Total Humans: {len(rectangles)}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1,
                     (0, 0, 0), 2)
 
         cv2.imshow('frame', processed_output)
@@ -52,13 +46,3 @@ def vid_read(model, directory):
             break
     cap.release()
     cv2.destroyAllWindows()
-
-
-def post_process(output_image, input_image):
-    # Get the dimensions of the input image
-    input_height, input_width = input_image.shape[:2]
-
-    # Resize the output image to match the dimensions of the input image
-    processed_output = cv2.resize(output_image, (input_width, input_height))
-
-    return processed_output
