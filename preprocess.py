@@ -2,7 +2,7 @@ import cv2
 import tensorflow as tf
 
 
-# Function to preprocess an image for dehazing
+# Function to preprocess an image for de-hazing
 def preprocess(frame):
     with tf.device('/CPU:0'):
         # Increase contrast on the image using CLAHE (Contrast Limited Adaptive Histogram Equalization)
