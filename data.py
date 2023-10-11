@@ -51,14 +51,6 @@ def load_and_preprocess_images(hazy_dir, gt_dir, target_size=(256, 256)):
 
 # Function to load and split a dataset into training and validation sets
 def load_and_split(hazy_dir, gt_dir):
-    # Get the raw sizes of the hazy images
-    raw_size = []
-    for hazy_file in os.listdir(hazy_dir):
-        if hazy_file.endswith('.jpg') or hazy_file.endswith('.png'):
-            hazy_path = os.path.join(hazy_dir, hazy_file)
-            hazy_image = cv2.imread(hazy_path)
-            raw_size.append(hazy_image.shape)
-
     # Load and preprocess hazy images and their corresponding ground truths
     hazy_images, raw_images = load_and_preprocess_images(hazy_dir, gt_dir)
 
