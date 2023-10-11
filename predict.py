@@ -9,9 +9,9 @@ from preprocess import preprocess
 def predict_and_visualize(model, img):
     with tf.device('/GPU:0'):
         # Preprocess and resize the test image
-        raw = img.copy()
-        img = preprocess(img)
         img = cv2.resize(img, (256, 256))
+        cv2.imshow('Raw', img)
+        img = preprocess(img)
         img = img.astype(np.float32) / 255.0
 
         # Resize the prediction
@@ -41,7 +41,7 @@ def vid_read(model, directory):
         cv2.putText(prediction, f'Total Humans: {len(rectangles)}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1,
                     (0, 0, 0), 2)
 
-        cv2.imshow('frame', processed_output)
+        cv2.imshow('frame', prediction)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
     cap.release()
