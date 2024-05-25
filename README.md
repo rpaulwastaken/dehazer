@@ -18,9 +18,9 @@ This project focuses on utilizing machine learning techniques to remove haze and
 
 1. Clone this repository to your local machine:
 
-   ```bash
+   ```
    git clone https://github.com/rpaulwastaken/dehazer.git
-
+   ```
 
 2. Install required dependencies using the following command
 
